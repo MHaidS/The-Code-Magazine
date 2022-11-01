@@ -1,0 +1,244 @@
+/* h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+} */
+
+/* for properties that don't get automatically inherited like border-top; lowest priority */
+* {
+  /* border-top: 10px solid #1098ad; */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #444;
+  font-family: sans-serif;
+
+  border-top: 10px solid #1098ad;
+}
+
+.container {
+  width: 800px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+  /* setting left & rt margins to auto will center the container inside the browser */
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px;
+  height: 80px;
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  padding: 50px 0;
+  margin-bottom: 60px;
+  /* when creating space outside of an element or bet multiple elements , choose only 1 bet margin-top or margin-bottom(PREFERABLY) */
+
+  /* when you need space inside an element, esp when there is a background-color or a border, use  padding  */
+  width: 500px;
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-style: italic;
+} */
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ul {
+  list-style: none;
+} */
+
+.related {
+  list-style: none;
+}
+
+body {
+}
+
+/* .first-li {
+  font-weight: bold;
+} */
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+/* li:nth-child(2) {
+  color: red;
+} */
+
+li:nth-child(even) {
+  /* color: red; */
+}
+
+article p:last-child {
+  /* color: rosybrown; */
+}
+
+/* article p:first-child { ---> MISCONCEPTION: doesn't work bec 'header' is the 1st child of 'article'
+  color: red;
+}
+
+article p:nth-child(2) {       ------> this would work instead
+  color: aqua;
+} */
+
+/* Styling Links */
+/* a {
+  color: red;
+} */
+
+/* targets those w/ href attribute */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color: #777 */
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  /* text-decoration: underline wavy orangered; */
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* !!!!  LVHA */
+
+.post-img {
+  /* width: 800px; the percentage of the width of the orig container, the header, w/c is basically the size of the entire width of the page; even if the size of the window is changed, the image will adapt as well */
+  width: 100%;
+
+  /* overridden the 500px width */
+  height: auto;
+  /* will automatically adapt to the orig aspect ratio of the image; this is only necessary if a height value has already been specified previously */
+}
+
+/* Resolving Conflicts */
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;      ======> color: green !important; just a hack & only used when needed!
+} */
+
+/* nav a:link,
+nav p {
+  font-size: 18px;
+} */
+
+/* put all elements in a container to center them all at once */

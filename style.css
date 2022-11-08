@@ -41,11 +41,14 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
+  margin-bottom: 60px;
   /* height: 80px;    ===> since height has been set to a specific value, block-level elements no longer fits the container w/c is why this is not recommended */
 }
 
 nav {
   font-size: 18px;
+  text-align: center;
+  /* the a elements are now centered since the parent element 'nav" has been centered using 'text-align: center;' */
 }
 
 article {
@@ -244,6 +247,9 @@ nav a:link {
   margin-top: 10px;
   /* margin-top does not apply on inline elements; settind display to 'inline-block solves this */
   display: inline-block;
+
+  /* text-align: center; */
+  /* this can't be used to center an inline element since the space it occupies is exactly the content needs; no empty space inside of w/c the element can be centered; this must be set to the parent 'nav' in this case */
 }
 
 nav a:link:last-child {
@@ -265,6 +271,51 @@ button {
   /* button position in relative to the body (position must be set to relative in the body selector; button now remains on the bottom-rt of the body even if the window is resized; this also works bec the button is inside the body */
 }
 
+h1::first-letter {
+  /* 41. Pseudo-elements ........ audio prob 1:41 (16:51) --> chrome --> works on explorer  */
+  font-style: normal;
+  margin-right: 5px;
+}
+
+/* h2::first-letter {
+  font-size: 80px;
+} */
+
+/* p::first-line {
+  color: red;
+} */
+
+/* The adjacent sibling combinator (+) separates 2 selectors and matches the second element only if it immediately follows the 1st element, and both are children of the same parent; the 1st line of the p immediately after the h3; p & h3 are siblings */
+h3 + p::first-line {
+  /* color: red; */
+}
+
+h2 {
+  /* background-color: orange; */
+  position: relative;
+}
+
+/* In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default. */
+
+/* ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default. */
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  /*  must be rendered as an inline-block box so that the box model will apply normally */
+  padding: 5px 10px;
+  /* to make the position of the pseudo-element("TOP", in this case) relative to the 'h2' element */
+  position: absolute;
+  /* it doesn't matter if ::before or ::after is used since the pseudo-element is positioned as absolute */
+  /* top: 0;
+  right: 0; */
+  top: -15px;
+  right: -25px;
+}
+
 /* Resolving Conflicts */
 /* #copyright {
   color: red;
@@ -279,7 +330,7 @@ button {
 }
 
 footer p {
-  color: green;      ======> color: green !important; just a hack & only used when needed!
+  color: green;  ======> color: green !important; just a hack & only used when needed!
 } */
 
 /* nav a:link,
@@ -314,3 +365,25 @@ nav p {
 
   c) Box-model applied as showed  
 */
+
+/* FLOATS */
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.author {
+  /* padding-left: 80px; */
+  /* padding-top: 10px; */
+  margin-top: 10px;
+  float: left;
+  margin-left: 20px;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}

@@ -13,6 +13,7 @@ li {
   /* border-top: 10px solid #1098ad; */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* PAGE SECTIONS */
@@ -25,7 +26,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
@@ -65,14 +66,13 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  /* padding-top: 50px;
-  padding-bottom: 50px; */
-  padding: 50px 0;
-  margin-bottom: 60px;
+  padding: 50px 40px;
+  /* margin-bottom: 60px; */
   /* when creating space outside of an element or bet multiple elements , choose only 1 bet margin-top or margin-bottom(PREFERABLY) */
 
   /* when you need space inside an element, esp when there is a background-color or a border, use  padding  */
-  width: 500px;
+  /* width: 500px; */
+  /* box-sizing: border-box; */
 }
 
 /* SMALLER ELEMENTS */
@@ -156,6 +156,7 @@ li:last-child {
 
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 body {
@@ -373,8 +374,6 @@ nav p {
 }
 
 .author {
-  /* padding-left: 80px; */
-  /* padding-top: 10px; */
   margin-top: 10px;
   float: left;
   margin-left: 20px;
@@ -386,4 +385,21 @@ h1 {
 
 nav {
   float: right;
+}
+
+article {
+  /* background-color: green; */
+  width: 825px;
+  float: left;
+}
+
+aside {
+  /* background-color: red; */
+  width: 300px;
+  float: right;
+}
+
+footer {
+  /* background-color: yellow; */
+  clear: both;
 }

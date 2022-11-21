@@ -42,7 +42,7 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 80px;    ===> since height has been set to a specific value, block-level elements no longer fits the container w/c is why this is not recommended */
 }
 
@@ -53,7 +53,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header {
@@ -439,9 +439,62 @@ footer { */
   /* this would apply the margin */
 }
 
+/*  */
 .related-author {
   margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
 }
+
+/* FLEXBOX LAYOUT */
+/* .row {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+  margin-bottom: 60px;
+}
+
+article { */
+/* flex-basis: 0 0 825px; */
+/* flex: 1; */
+/* this will allow it to grow into the avail space as much as it can */
+/* margin-bottom: 0;
+}
+
+aside { */
+/* 
+     DEFAULTS:
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto; 
+  */
+/* flex: 0 0 300px;
+} */
+
+/* CSS GRID LAYOUT */
+.container {
+  display: grid; /* by default, 'display: grid' places items into rows */
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  /* grid-column: 1 / span 2; */
+  grid-column: 1 / -1;
+}
+
+article {
+}
+
+aside {
+}
+
+footer {
+  /* background-color: #1098ad; */
+  grid-column: 1 / -1;
+}
+
+/* press Shift+CMD+Period (.) ========> to show & hide hidden files on mac */
